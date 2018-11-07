@@ -2,7 +2,6 @@ from random import *
                                                         #define functions
 def wordToNumber(array,size):                            #changes the letters to numbers and checks for duplicates
     for x in range(size):
-        randNum = randint(0,10) 
         for y in range(x+1,size):
             if not isinstance(array[x], int):
                 if array[y] == array[x]:
@@ -42,8 +41,10 @@ number_1 = 1
 number_2 = 3
 number_3 = 0
 
-while(number_1+number_2 != number_3):
+
+while number_1+number_2 != number_3 or number_1 != [0,0,0,0,0,0,0]:
     
+    randNum = randint(0,10) 
     wordToNumber(array_total,_size_total)
 
     array_new_1 = array_total[slice(0,_size_1)]
@@ -53,9 +54,12 @@ while(number_1+number_2 != number_3):
     number_1 = arrayToInt(array_new_1)
     number_2 = arrayToInt(array_new_2)
     number_3 = arrayToInt(array_new_3)
+    print(array_new_1,number_1)
+    print(array_new_2,number_2)
+    print(array_new_3,number_3)
 
-print(array_new_1,number_1)
-print(array_new_2,number_2)
-print(array_new_3,number_3)
-
-
+else:
+    print(array_new_1,number_1)
+    print(array_new_2,number_2)
+    print(array_new_3,number_3)
+    print ("I'm finished")
