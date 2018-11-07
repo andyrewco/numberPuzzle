@@ -1,4 +1,18 @@
 from random import *
+                                                        #define functions
+def wordToNumber(array,siz):                            #changes the letters to numbers and checks for duplicates
+    for x in range(size):
+        randNum = randint(0,10) 
+        for y in range(x+1,size):
+            if not isinstance(array[x], int):
+                if array[y] == array[x]:
+                    array[y] = randNum
+        if not isinstance(array[x], int):
+            array[x] = randNum
+
+def arrayToInt(numList):                                #changes the arrays to integers
+    s = ''.join(map(str, numList))
+    return int(s)
 
 word_1 = input('Please enter the first word: \n')
 word_2 = input('Please enter the second word: \n')
@@ -29,18 +43,8 @@ number_2 = 3
 number_3 = 0
 
 while(number_1+number_2 != number_3):
-    for x in range(_size_total):
-        randNum = randint(0,10) 
-        for y in range(x+1,_size_total):
-            if not isinstance(array_total[x], int):
-                if array_total[y] == array_total[x]:
-                    array_total[y] = randNum
-        if not isinstance(array_total[x], int):
-            array_total[x] = randNum
-
-    def arrayToInt(numList):
-        s = ''.join(map(str, numList))
-        return int(s)
+    
+    wordToNumber(array_total,_size_total)
 
     array_new_1 = array_total[slice(0,_size_1)]
     array_new_2 = array_total[slice(_size_1,_size_1+_size_2)]
