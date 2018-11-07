@@ -1,6 +1,6 @@
 from random import *
                                                         #define functions
-def wordToNumber(array,siz):                            #changes the letters to numbers and checks for duplicates
+def wordToNumber(array,size):                            #changes the letters to numbers and checks for duplicates
     for x in range(size):
         randNum = randint(0,10) 
         for y in range(x+1,size):
